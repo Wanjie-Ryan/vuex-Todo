@@ -10,27 +10,23 @@
 </template>
 
 <script>
-
-import { mapActions } from 'vuex';
+import { mapActions } from "vuex";
 
 export default {
   name: "AddTodo",
-  data(){
-    return{
-        title:''
-    }
+  data() {
+    return {
+      title: "",
+    };
   },
-  methods:{
-    ...mapActions(['createTodo']),
+  methods: {
+    ...mapActions(["createTodo"]),
 
     // addTodo is an onSubmit function to the form
-    AddTodo(){
-        this.createTodo(this.title)
-    }
-  }
-
-
-
+    AddTodo() {
+      this.createTodo(this.title);
+    },
+  },
 };
 </script>
 
