@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h4>Todos</h4>
-
+    
     <div class="todos">
       <div class="todo" v-for="todo in allTodos" :key="todo.id">
         {{ todo.title }}

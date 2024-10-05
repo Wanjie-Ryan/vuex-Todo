@@ -1,6 +1,25 @@
 <template>
-  <router-view />
+  <!-- <router-view /> -->
+
+  <div id="app">
+    <div class="container">
+      <AddTodoComponent />
+      <TodoComponent />
+    </div>
+  </div>
 </template>
+
+<script>
+import TodoComponent from "./components/Todo.vue";
+import AddTodoComponent from "./components/AddTodo.vue";
+export default {
+  name: "App",
+  components: {
+    TodoComponent,
+    AddTodoComponent,
+  },
+};
+</script>
 
 <style>
 body {
