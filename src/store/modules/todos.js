@@ -40,6 +40,16 @@ const actions = {
     console.log(response);
     commit("removeTodo", id);
   },
+
+  async FilterTodos({ commit }, e) {
+    const limit = parseInt(e.target.options[e.target.selectedIndex].innerText);
+
+    const response = await axios.get(
+      `https://jsonplaceholder.typicode.com/todos?_limit=${limit}`
+    );
+    console.log(response);
+    commit("setTodos", response.data);
+  },
 };
 
 const mutations = {

@@ -1,28 +1,28 @@
 <template>
- <div style="margin-top:10px;">
-
+  <div style="margin-top: 10px">
     Filter Todos:
 
-    <select>
-        <option value="200">200</option>
-        <option value="100">100</option>
-        <option value="50">50</option>
-        <option value="20">20</option>
-        <option value="10">10</option>
-        <option value="5">5</option>
+    <select @change="FilterTodos($event)">
+      <option value="200">200</option>
+      <option value="100">100</option>
+      <option value="50">50</option>
+      <option value="20">20</option>
+      <option value="10">10</option>
+      <option value="5">5</option>
     </select>
-
-
- </div>
+  </div>
 </template>
 
 <script>
-export default {
+import { mapActions } from "vuex";
 
-    name:'FilterTodo'
-}
+export default {
+  name: "FilterTodo",
+  methods: {
+    ...mapActions(["FilterTodos"]),
+  },
+};
 </script>
 
 <style>
-
 </style>
